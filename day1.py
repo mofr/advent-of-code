@@ -1,0 +1,24 @@
+input = "L4, R2, R4, L5, L3, L1, R4, R5, R1, R3, L3, L2, L2, R5, R1, L1, L2, R2, R2, L5, R5, R5, L2, R1, R2, L2, L4, L1, R5, R2, R1, R1, L2, L3, R2, L5, L186, L5, L3, R3, L5, R4, R2, L5, R1, R4, L1, L3, R3, R1, L1, R4, R2, L1, L4, R5, L1, R50, L4, R3, R78, R4, R2, L4, R3, L4, R4, L1, R5, L4, R1, L2, R3, L2, R5, R5, L4, L1, L2, R185, L5, R2, R1, L3, R4, L5, R2, R4, L3, R4, L2, L5, R1, R2, L2, L1, L2, R2, L2, R1, L5, L3, L4, L3, L4, L2, L5, L5, R2, L3, L4, R4, R4, R5, L4, L2, R4, L5, R3, R1, L1, R3, L2, R2, R1, R5, L4, R5, L3, R2, R3, R1, R4, L4, R1, R3, L5, L1, L3, R2, R1, R4, L4, R3, L3, R3, R2, L3, L3, R4, L2, R4, L3, L4, R5, R1, L1, R5, R3, R1, R3, R4, L1, R4, R3, R1, L5, L5, L4, R4, R3, L2, R1, R5, L3, R4, R5, L4, L5, R2"
+
+directions = ((0, 1),
+              (1, 0),
+              (0, -1),
+              (-1, 0)
+              )
+pos = (0, 0)
+visited = {pos}
+dir = 0
+
+for step in input.split(', '):
+    dir += 1 if step[0] == 'R' else -1
+    dir %= len(directions)
+    length = int(step[1:])
+    for _ in range(length):
+        pos = (pos[0] + directions[dir][0],
+               pos[1] + directions[dir][1])
+        if pos in visited:
+            print('Visited twice {}'.format(pos[0] + pos[1]))
+        else:
+            visited.add(pos)
+
+print('Distance {}'.format(pos[0] + pos[1]))
