@@ -9,7 +9,7 @@ for line in input.strip().split('\n'):
     if can_be_triangle:
         possible_triangles += 1
 
-print('Possible triangles {}'.format(possible_triangles))
+print(possible_triangles)
 
 
 def group(iterator, count):
@@ -26,4 +26,4 @@ for sides in group(numbers, 3):
     if can_be_triangle:
         possible_triangles_vertically += 1
 
-print('Possible triangles vertically {}'.format(possible_triangles_vertically))
+print(possible_triangles_vertically)

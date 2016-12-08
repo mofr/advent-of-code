@@ -17,8 +17,8 @@ for step in input.split(', '):
         pos = (pos[0] + directions[dir][0],
                pos[1] + directions[dir][1])
         if pos in visited:
-            print('Visited twice {}'.format(pos[0] + pos[1]))
+            print(pos[0] + pos[1])
+            exit()
         else:
             visited.add(pos)
 
-print('Distance {}'.format(pos[0] + pos[1]))

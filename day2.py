@@ -27,8 +27,6 @@ keypad = """
 x, y = 1, 3
 
 
-print('Start from {}'.format(keypad[y][x]))
-
 for line in input.strip().split('\n'):
     for c in line:
         nx, ny = x, y

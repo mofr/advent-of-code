@@ -47,5 +47,5 @@ print(id_sum)
 
 for name, id in rooms:
     name = decrypt(name, id)
-    if 'north' in name:
-        print(id, name)
+    if 'northpole' in name:
+        print(id)
