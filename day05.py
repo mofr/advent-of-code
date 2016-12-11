@@ -1,6 +1,6 @@
 import hashlib
 
-with open('day5_input') as f:
+with open('day05_input') as f:
     input = f.read()
 
 common_hash = hashlib.md5()

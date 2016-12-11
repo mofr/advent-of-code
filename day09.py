@@ -1,4 +1,4 @@
-with open('day9_input') as f:
+with open('day09_input') as f:
     input = f.read()
 
 input = input.replace(' ', '')

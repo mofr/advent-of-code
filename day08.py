@@ -1,4 +1,4 @@
-with open('day8_input') as f:
+with open('day08_input') as f:
     input = f.read()
 
 screen = []

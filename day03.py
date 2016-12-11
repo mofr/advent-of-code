@@ -1,4 +1,4 @@
-with open('day3_input') as f:
+with open('day03_input') as f:
     input = f.read()
 
 possible_triangles = 0

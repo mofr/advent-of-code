@@ -1,4 +1,4 @@
-with open('day7_input') as f:
+with open('day07_input') as f:
     input = f.read()
 
 

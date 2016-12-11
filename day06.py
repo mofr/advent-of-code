@@ -5,7 +5,7 @@ def most_common(lst):
 def least_common(lst):
     return min(set(lst), key=lst.count)
 
-with open('day6_input') as f:
+with open('day06_input') as f:
     input = f.read()
 
 columns = []

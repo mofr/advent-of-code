@@ -1,6 +1,6 @@
 import re
 
-with open('day4_input') as f:
+with open('day04_input') as f:
     input = f.read()
 
 
