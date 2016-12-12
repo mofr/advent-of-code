@@ -1,11 +1,7 @@
-import time
-
-start = time.perf_counter()
-
-with open('day12_input') as f:
+with open('day12_input_optimized') as f:
     input = f.read()
 
-statements = list(map(lambda s: s.split(), input.split('\n')))
+statements = list(map(lambda s: (s.split()[0], s.split()[1:]), input.split('\n')))
 
 pc = 0
 reg = {
@@ -22,7 +18,7 @@ def val(arg):
         return int(arg)
 
 while pc < len(statements):
-    op, *args = statements[pc]
+    op, args = statements[pc]
     if op == 'cpy':
         reg[args[1]] = val(args[0])
     elif op == 'inc':
@@ -33,9 +29,10 @@ while pc < len(statements):
         if val(args[0]) != 0:
             pc += int(args[1])
             continue
+    elif op == 'add':
+        reg[args[1]] += reg[args[0]]
     else:
         raise
     pc += 1
 
 print(reg['a'])
-print('Elapsed {} s'.format(time.perf_counter() - start))
