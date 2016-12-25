@@ -1,8 +1,7 @@
-from assembunny import Assembunny
+import assembunny
 
 with open('day23_input_optimized') as f:
     input = f.read()
 
-asm = Assembunny(input, a=12)
-asm.run()
-print(asm.reg['a'])
+reg = assembunny.run(input, a=12)
+print(reg['a'])

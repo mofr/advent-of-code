@@ -1,11 +1,10 @@
 import itertools
-from assembunny import Assembunny
+import assembunny
 
 with open('day25_input') as f:
     input = f.read()
 
 for a in itertools.count():
-    asm = Assembunny(input, a=a)
     counter = 0
     clock_signal = True
 
@@ -15,7 +14,7 @@ for a in itertools.count():
         counter += 1
         return counter > 16 or not clock_signal
 
-    asm.run(out)
+    assembunny.run(input, out, a=a)
 
     if clock_signal:
         print(a)
