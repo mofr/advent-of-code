@@ -1,4 +1,8 @@
-with open('day03_input') as f:
+import sys
+
+input_filename = sys.argv[1]
+
+with open(input_filename) as f:
     input = f.read()
 
 possible_triangles = 0

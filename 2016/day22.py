@@ -1,6 +1,9 @@
 from pathfinding import find_path
+import sys
 
-with open('day22_input') as f:
+input_filename = sys.argv[1]
+
+with open(input_filename) as f:
     input = f.read()
 
 

@@ -1,6 +1,9 @@
 import hashlib
+import sys
 
-with open('day05_input') as f:
+input_filename = sys.argv[1]
+
+with open(input_filename) as f:
     input = f.read()
 
 common_hash = hashlib.md5()

@@ -1,7 +1,10 @@
+import sys
 import itertools
 import assembunny
 
-with open('day25_input') as f:
+input_filename = sys.argv[1]
+
+with open(input_filename) as f:
     input = f.read()
 
 for a in itertools.count():

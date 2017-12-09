@@ -1,6 +1,9 @@
 import re
+import sys
 
-with open('day04_input') as f:
+input_filename = sys.argv[1]
+
+with open(input_filename) as f:
     input = f.read()
 
 

@@ -1,4 +1,8 @@
-with open('day09_input') as f:
+import sys
+
+input_filename = sys.argv[1]
+
+with open(input_filename) as f:
     input = f.read()
 
 input = input.replace(' ', '')

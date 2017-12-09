@@ -1,6 +1,9 @@
 from collections import defaultdict
+import sys
 
-with open('day10_input') as f:
+input_filename = sys.argv[1]
+
+with open(input_filename) as f:
     input = f.read()
 
 chips = defaultdict(list)

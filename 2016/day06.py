@@ -1,12 +1,17 @@
+import sys
+
+input_filename = sys.argv[1]
+
+with open(input_filename) as f:
+    input = f.read()
+
+
 def most_common(lst):
     return max(set(lst), key=lst.count)
 
 
 def least_common(lst):
     return min(set(lst), key=lst.count)
-
-with open('day06_input') as f:
-    input = f.read()
 
 columns = []
 for _ in range( len(input.split()[0])):
