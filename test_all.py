@@ -1,5 +1,6 @@
 import os
 import sys
+import pytest
 from glob import glob
 
 
@@ -13,6 +14,8 @@ def pytest_generate_tests(metafunc):
 
 
 def test_all(day):
+    if day in ('day05', 'day14', 'day16', 'day18', 'day19'):
+        pytest.skip('Too long day')
     retcode = os.system('{python} {day}.py > {day}_output'.format(python=sys.executable, day=day))
     assert retcode == 0
 
