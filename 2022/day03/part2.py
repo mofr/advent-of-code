@@ -14,9 +14,7 @@ def prio(item):
 total = 0
 rucksacks = input.strip().split('\n')
 for i in range(0, len(rucksacks), 3):
-    r1 = rucksacks[i]
-    r2 = rucksacks[i + 1]
-    r3 = rucksacks[i + 2]
+    r1, r2, r3 = rucksacks[i:i + 3]
     common_items = set(r1) & set(r2) & set(r3)
     total += sum(map(prio, common_items))
 
